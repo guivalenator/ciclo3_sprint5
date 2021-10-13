@@ -13,28 +13,28 @@
 
     <div class="container p-5" >
         <div class="col-md-4 offset-md-4">
-            <div class="card animated flipInY">
+            <div class="card animated flipInX">
                 <div class="card-header bg-dark text-white text-center">
-                    <h3>Registro</h3>
+                    <h3>Login</h3>
                 </div>
                 <div class="card-body">
-                    <form action="" method="" target="request" onsubmit="agregarRegistro()">
+                    <form action="" method="" target="request" >
                         <div class="form-group">
-                            <input type="text" class="form-control" id="dato_nombre_usuario" onchange="validar_nombre_usuario(value)" placeholder="Usuario">
+                            <input type="text" class="form-control" id="in_login_username " placeholder="Usuario">
+                        </div>
+                        
+                        <div class="form-group">
+                            <span class="input-group-text"></span>
+                            <input type="password" class="form-control" id=" in_login_password"   placeholder="Contraseña">
                         </div>
                         <div class="form-group">
                             <span class="input-group-text"></span>
-                            <input type="text" class="form-control" id="dato_edad_usuario" " onchange="validar_edad_usuario(value)" placeholder="Edad">
-                        </div>
-                        <div class="form-group">
-                            <span class="input-group-text"></span>
-                            <input type="password" class="form-control" id="dato_contrasena"  onchange="validar_contrasena(value)" placeholder="Contraseña">
+                            <input type="text" class="form-control" id="in_login_captcha"  placeholder="Captcha">
                         </div>
                         <div class="form-group text-center">
                             <span class="input-group-text"></span>
                             <span class="input-group-text"></span>
-                            <input class="btn btn-primary btn-center" type="submit" onsubmit="agregarRegistro()">
-                            </input>
+                            <input class="btn btn-primary btn-center" type="submit" value="Ingresar">
                         </div>
                     </form>
                 </div>

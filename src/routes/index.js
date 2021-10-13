@@ -7,14 +7,19 @@ router.get('/',(req, res) => {
  });
 
  router.get('/contact',(req, res) => {
-   res.render('contact.html',{title:'contact page'});
+   res.render('contact.html',{title:'Pagina de Contacto'});
 
  });
 
- router.get('/registro',(req, res) => {
-   res.render('registro.html',{title:'Pagina de registro'});
+router.get('/registro',(req, res) => {
+  res.render('registro.html',{title:'Pagina de registro'});
 
- });
+});
+
+router.get('/login',(req, res) => {
+  res.render('login.html',{title:'Pagina de Ingreso'});
+
+});
 
 
 
