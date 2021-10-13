@@ -7,9 +7,9 @@ body {
 
 #startImage{
     width: 400px;
-	height: 100px;
+	height: 200px;
 	border: 2px solid #fff;
-    object-fit: fill;
+    object-fit: cover;
 }
 
 .dato_nombre_usuario{
@@ -20,4 +20,19 @@ body {
 .dato_edad_usuario{
     padding: auto;
     margin-top: auto;
+}
+
+.carousel-inner .carousel-item-right.active,
+.carousel-inner .carousel-item-next {
+  transform: translateX(33.33%);
+}
+
+.carousel-inner .carousel-item-left.active, 
+.carousel-inner .carousel-item-prev {
+  transform: translateX(-33.33%)
+}
+
+.carousel-inner .carousel-item-right,
+.carousel-inner .carousel-item-left{ 
+  transform: translateX(0);
 }
