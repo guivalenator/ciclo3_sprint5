@@ -28,22 +28,22 @@ module.exports = app =>{
   const users = require ("../controllers/user.controller.js");
 
   //Crea un nuevo usuario
-  app.post("/usuarios", User.create);
+  app.post("/usuarios", users.create);
 
   //Consulta todos los usuarios
-  app.get("usuarios", User.findAll);
+  app.get("usuarios", users.findAll);
 
   //consultar un usuario por Id
-  app.get("/usuarios/:usuarioId", usuarios.findOne);
+  app.get("/usuarios/:usuarioId", users.findOne);
 
   //Actualizar usuario por Id
-  app.put("/usuarios/:usuarioId", usuarios.update);
+  app.put("/usuarios/:usuarioId", users.update);
 
   //Eliminar usuario por Id
   app.delete("/usuarios/:usuarioId", usuarios.delete);
 
   //Eliminar todos los usuarios
-  app.delete("/usuarios", usuarios.deleteAll);
+  app.delete("/usuarios", users.deleteAll);
 }
 
 
