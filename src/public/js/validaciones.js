@@ -1,3 +1,4 @@
+const registros = [];
 //Funcion para validar nombre de usuario
 function validar_nombre_usuario(string){
     var nombre = string;
@@ -45,7 +46,7 @@ function validar_edad_usuario(edad){
         
     }
     else if(edad >=13 && edad <110){
-       return true;
+        return true;
     }
     else{
         document.getElementById("dato_edad_usuario").value=""; //limpia input
@@ -78,25 +79,18 @@ function validar_contrasena(string){
 //=====================================================//
 
 function agregarRegistro() {
-    const pool = require('pool')
-    const registros = [];
+        
     let usuario = document.getElementById("dato_nombre_usuario").value;
     let edad = document.getElementById("dato_edad_usuario").value;
     let contrasena = document.getElementById("dato_contrasena").value;
     
-    console.log(usuario);
-    console.log(edad);
-    console.log(contrasena);
-
     registros.push({
-        usuario: usuario,
-        edad: edad,
-        contrasena: contrasena
+        usuario,
+        edad,
+        contrasena
     });
-    console.log(registros.values)
-    pool.query("insert into usuarios set?",registros.values);
+    //console.log(registros[0])
     
-    console.log(registros);
     //OrdenarArreglo(registros);
     
 }
@@ -153,8 +147,7 @@ function OrdenarArreglo(arreglo) {
     console.log(arreglo);
     return arreglo;
 }
-
+*/
 module.exports.registros = registros;
 module.exports.agregarRegistro = agregarRegistro;
-module.exports.OrdenarArreglo = OrdenarArreglo;
-*/
+//module.exports.OrdenarArreglo = OrdenarArreglo;
