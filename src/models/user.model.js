@@ -1,22 +1,25 @@
 const { renderFile } = require("ejs");
 const pool = require("./database.js");
+console.log("Ingreso al modelo")
 
 //constructor
 const User = function(user){
     this.usuario = user.usuario;
+    this.contrasena = user.contrasena;
     this.edad = user.edad;
-    this.contrasena. user.contrasena;
+    
 };
 
 User.create = (newUser, result) => {
-    pool.query("INSERT INTO usuarios SET?", newUser,(err, res) =>{
+    console.log("Voy a insertar en la BD")
+    pool.query("INSERT INTO usuarios SET ?", newUser,(err, res) =>{
         if(err){
             console.log("error: ", err);
             result(err,null);
             return;
         }
         console.log("Usuario creado: ", {id: res.insertId, ...newUser});
-        result(null,{id: res.insertId,...newUser});
+        result(null,{id: res.insertId, ...newUser});
     });
 };
 

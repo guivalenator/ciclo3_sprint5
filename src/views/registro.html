@@ -18,13 +18,13 @@
                     <h3>Registro</h3>
                 </div>
                 <div class="card-body">
-                    <form action="" method="" target="request" onsubmit="agregarRegistro()">
+                    <form action="/usuarios" method="post" target="" onsubmit="agregarRegistro()">
                         <div class="form-group">
                             <input type="text" class="form-control" id="dato_nombre_usuario" onchange="validar_nombre_usuario(value)" placeholder="Usuario">
                         </div>
                         <div class="form-group">
                             <span class="input-group-text"></span>
-                            <input type="text" class="form-control" id="dato_edad_usuario" " onchange="validar_edad_usuario(value)" placeholder="Edad">
+                            <input type="text" class="form-control" id="dato_edad_usuario"  onchange="validar_edad_usuario(value)" placeholder="Edad">
                         </div>
                         <div class="form-group">
                             <span class="input-group-text"></span>
@@ -33,7 +33,7 @@
                         <div class="form-group text-center">
                             <span class="input-group-text"></span>
                             <span class="input-group-text"></span>
-                            <input class="btn btn-primary btn-center" type="submit" onsubmit="agregarRegistro()">
+                            <input class="btn btn-primary btn-center" type="submit">
                             </input>
                         </div>
                     </form>
@@ -43,7 +43,6 @@
     </div>
     <%- include('partials/footer.html'); %>
 
-    <script type="text/javascript" src="js/database.js"></script>
-    <script type="text/javascript" src="js/validaciones.js"></script>
+     <script type="text/javascript" src="./js/validaciones.js"></script>
 </body>
 </html>

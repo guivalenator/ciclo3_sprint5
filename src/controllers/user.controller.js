@@ -1,4 +1,6 @@
-const Users = require("../models/user.model.js");
+
+const User = require("../models/user.model.js");
+const arreglo = require("../public/js/validaciones.js")
 
 //Crea y guarda un nuevo usuario
 exports.create = (req, res) =>{
@@ -11,17 +13,19 @@ exports.create = (req, res) =>{
 
     //Crea el usuario
     const user = new User({
-        usuario: req.body.usuario,
-        edad: req.body.edad,
-        contrasena: req.body.contrasena
+        usuario: arreglo.registros[1],
+        contrasena: arreglo.registros[1],
+        edad: parseInt(arreglo.registros[2])    
     });
+
+    
 
     //Guarda el usuario en la base de datos
 
     User.create(user,(err, data) => {
         if(err)
             res.status(500).send({
-                message:
+                messagew:
                 err.message || "Ha ocurrido un error mientras de almacenaba el usuario."
             });
         else res.send(data)
@@ -31,7 +35,14 @@ exports.create = (req, res) =>{
 
 //Consulta todos los usuarios de la base de datos
 exports.findAll = (req, res) =>{
-
+    User.getAll((err, data) => {
+        if (err)
+        res.status(500).send({
+            message:
+            err.message || "Some error occurred while retrieving customers."
+        });
+        else res.send(data);
+    });
 };
 
 //Consulta un usuario por el Id
