@@ -1,4 +1,4 @@
-const registros = [];
+
 //Funcion para validar nombre de usuario
 function validar_nombre_usuario(string){
     var nombre = string;
@@ -79,20 +79,20 @@ function validar_contrasena(string){
 //=====================================================//
 
 function agregarRegistro() {
-        
+    const registros = [];    
     let usuario = document.getElementById("dato_nombre_usuario").value;
     let edad = document.getElementById("dato_edad_usuario").value;
     let contrasena = document.getElementById("dato_contrasena").value;
     
-    registros.push({
+    registros.push(
         usuario,
         edad,
         contrasena
-    });
-    //console.log(registros[0])
-    
+    );
+    module.exports.registros = registros;   
     //OrdenarArreglo(registros);
-    
+    console.log("Validaciones.js")
+    console.log(registros[0])
 }
 /*
 function OrdenarArreglo(registros) {
@@ -148,6 +148,6 @@ function OrdenarArreglo(arreglo) {
     return arreglo;
 }
 */
-module.exports.registros = registros;
+
 module.exports.agregarRegistro = agregarRegistro;
 //module.exports.OrdenarArreglo = OrdenarArreglo;

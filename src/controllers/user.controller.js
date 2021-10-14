@@ -2,6 +2,8 @@
 const User = require("../models/user.model.js");
 const arreglo = require("../public/js/validaciones.js")
 
+console.log("Ingresó a user.controllers.js");
+console.log(arreglo);
 //Crea y guarda un nuevo usuario
 exports.create = (req, res) =>{
     //Se valida la peticion
@@ -13,7 +15,7 @@ exports.create = (req, res) =>{
 
     //Crea el usuario
     const user = new User({
-        usuario: arreglo.registros[1],
+        usuario: arreglo.registros[0],
         contrasena: arreglo.registros[1],
         edad: parseInt(arreglo.registros[2])    
     });
