@@ -18,17 +18,17 @@
                     <h3>Registro</h3>
                 </div>
                 <div class="card-body">
-                    <form action="/usuarios" method="post" target="" onsubmit="agregarRegistro()">
+                    <form action="/usuarios" method="post" target="request" onsubmit="agregarRegistro()">
                         <div class="form-group">
-                            <input type="text" class="form-control" id="dato_nombre_usuario" onchange="validar_nombre_usuario(value)" placeholder="Usuario">
+                            <input type="text" class="form-control" id="dato_nombre_usuario" value="Luis" onchange="validar_nombre_usuario(value)" placeholder="Usuario">
                         </div>
                         <div class="form-group">
                             <span class="input-group-text"></span>
-                            <input type="text" class="form-control" id="dato_edad_usuario"  onchange="validar_edad_usuario(value)" placeholder="Edad">
+                            <input type="text" class="form-control" id="dato_edad_usuario" value="92" onchange="validar_edad_usuario(value)" placeholder="Edad">
                         </div>
                         <div class="form-group">
                             <span class="input-group-text"></span>
-                            <input type="password" class="form-control" id="dato_contrasena"  onchange="validar_contrasena(value)" placeholder="Contraseña">
+                            <input type="password" class="form-control" id="dato_contrasena"  value="123654" onchange="validar_contrasena(value)" placeholder="Contraseña">
                         </div>
                         <div class="form-group text-center">
                             <span class="input-group-text"></span>

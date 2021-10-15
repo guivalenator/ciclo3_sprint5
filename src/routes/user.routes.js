@@ -1,7 +1,8 @@
+console.log("Ingresa a user.routes.js")
 const express = require('express');
 const router = express.Router();
 const User = require ("../controllers/user.controller.js");
-console.log("Ingresa a user.routes.js")
+
 
 router.get('/',(req, res) => {
   res.render('index.html',{title:'Mi primera pagina web'});

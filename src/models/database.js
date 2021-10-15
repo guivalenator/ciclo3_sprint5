@@ -1,3 +1,4 @@
+console.log("Ingreso a database.js")
 //Importa paquete mysql
 const mysql = require('mysql');
 

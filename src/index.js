@@ -1,3 +1,4 @@
+console.log("Ingreso a index.js")
 const express = require('express');
 const app = express();
 const path = require ('path')

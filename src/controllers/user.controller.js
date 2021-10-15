@@ -1,9 +1,12 @@
-
-const User = require("../models/user.model.js");
-const arreglo = require("../public/js/validaciones.js")
-
 console.log("Ingresó a user.controllers.js");
-console.log(arreglo);
+const User = require("../models/user.model.js");
+let arreglo = require("../public/js/validaciones.js")
+let array = arreglo.registros;
+
+console.log(array,"Please");
+
+
+//console.log("user.controller.js importado ",arreglo.contrasena);
 //Crea y guarda un nuevo usuario
 exports.create = (req, res) =>{
     //Se valida la peticion
@@ -15,9 +18,9 @@ exports.create = (req, res) =>{
 
     //Crea el usuario
     const user = new User({
-        usuario: arreglo.registros[0],
-        contrasena: arreglo.registros[1],
-        edad: parseInt(arreglo.registros[2])    
+        usuario: array[1],
+        contrasena: "asdfgh",
+        edad: parseInt("54")    
     });
 
     
@@ -25,6 +28,9 @@ exports.create = (req, res) =>{
     //Guarda el usuario en la base de datos
 
     User.create(user,(err, data) => {
+        console.log("Guarda Usuario")
+        console.log(user.contrasena)
+        console.log(user.usuario)
         if(err)
             res.status(500).send({
                 messagew:
